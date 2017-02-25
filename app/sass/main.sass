@@ -1,0 +1,209 @@
+@import ../../bourbon/bourbon
+@import fonts
+@import libs
+@import vars
+@import settings
+
+.main-head
+  color: $white
+  position: relative
+  min-height: 80vh
+  background: $color url("../img/bg.jpg") no-repeat center top
+  background-size: cover
+  .top-line
+    padding: 20px 0
+    .top-phone
+      text-align: right
+      p
+        margin-top: 0
+        font-family: "Exo2Bold", serif
+        font-size: 20px
+      .button
+        padding: 7px 20px
+    .top-soc
+      .fa
+        font-size: 32px
+        margin-right: 10px
+        margin-bottom: 10px
+
+  .header-content
+    padding-top: 10%
+    h1
+      margin-bottom: 50px
+
+.s-about
+  &-item
+    img
+      width: 150px
+      margin-bottom: 20px
+  .button
+    margin-top: 50px
+
+.s-features
+  color: $white
+  img
+    width: 150px
+    margin-bottom: 20px
+
+.s-works
+  .portfolio
+    .col-lg-3
+      padding: 7px 7px
+    &-item
+      position: relative
+      display: block
+      overflow: hidden
+      img
+        @include mt(.5s)
+      &:hover
+        .portfolio-item-cont
+          opacity: 1
+          transform: scale(.95)
+        img
+          transform: scale(1.1)
+      &-cont
+        position: absolute
+        color: $blue
+        padding-top: 20%
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(255, 255, 255, .85)
+        text-align: center
+        opacity: 0
+        @include mt(.5s)
+        transform: scale(1.1)
+        .fa
+          color: rgba($blue, .6)
+          font-size: 24px
+  .button
+    margin-top: 60px
+
+.portfolio-popup
+  position: relative
+  background-color: #fff
+  display: block
+  max-width: 1000px
+  margin: 5% auto
+  text-align: center
+  padding-top: 15px
+  @include mt(.25s)
+  .row, .col-sm-12
+    display: block
+  h2
+    line-height: em(21px)
+    margin: 30px auto
+    width: 70%
+  &-text
+    text-align: left
+    display: block
+    width: 90%
+    margin: 20px auto 40px
+  .td
+    vertical-align: top
+    padding: 0 7px
+    color: #666
+    &.wsnw
+      color: $accent
+    .fa
+      font-size: 22px
+      margin-right: 3px
+
+.s-brands
+  color: $white
+.carousel-brands
+  padding: 0 80px
+  position: relative
+  .carousel-brand
+    +mt(.5s)
+    opacity: .5
+    &:hover
+      opacity: .9
+    a
+      display: block
+      text-align: center
+      .responsive-img
+        max-width: 70%
+        max-height: 40px
+        display: inline-block
+  .owl-nav
+    position: absolute
+    width: 100%
+    top: 0
+    > div
+      position: absolute
+      font-size: 34px
+      line-height: 38px
+      color: #9c9c9c
+      @include mt(.25s)
+      &:hover
+        color: $white
+      &.owl-prev
+        left: -25px
+      &.owl-next
+        right: 25px
+
+.s-contacts
+  padding-top: 60px
+
+.form
+  display: block
+  padding: 20px 30px
+  border: 1px solid rgba($accent, 20%)
+  border-radius: 8px
+  margin-bottom: 50px
+  &-head
+    h3
+      margin: 5px 0 15px
+    p
+      margin-bottom: 25px
+  label
+    display: block
+    span
+      display: block
+      color: rgba($white, .7)
+      margin-bottom: 5px
+    input, textarea
+      display: block
+      width: 100%
+      outline: none
+      background-color: transparent
+      color: $white
+      border: 1px solid rgba($accent, 20%)
+      border-radius: 5px
+      margin-bottom: 20px
+      padding: 10px 16px
+  .button
+    margin-top: 20px
+
+.contacts-text
+  h3
+    margin: 20px 0 20px
+    text-transform: none
+  p
+    font-size: em(15px)
+    margin-bottom: 15px
+  .fa
+    margin-right: 0
+    width: 15px
+    font-size: 20px
+  a
+    text-decoration: none
+    .img-svg
+      margin-top: 20px
+      margin-right: 20px
+    &:hover, &:focus
+      color: rgba($white, .7) !important
+      .img-svg
+        path
+          fill: $accent !important
+
+.form.form-callback
+  background-color: rgba($white, .1)
+  h4
+    margin-bottom: 30px
+  input
+    margin-bottom: 30px
+  .button
+    margin-top: 10px
